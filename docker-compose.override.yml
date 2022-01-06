@@ -47,7 +47,7 @@ services:
             - ./:/app
             - /etc/passwd:/etc/passwd:ro
             - /etc/group:/etc/group:ro
-        command: composer install --ignore-platform-reqs --no-scripts
+        command: sh -c "composer install --ignore-platform-reqs --no-scripts && composer update"
 
 volumes:
     db-data:
